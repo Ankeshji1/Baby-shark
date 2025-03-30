@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Coin Miner</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SHARK COIN MINER</h1>
+        </header>
+        
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-label">Shark Coins</div>
+                <div class="stat-value" id="coins">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Per Tap</div>
+                <div class="stat-value" id="per-tap">1</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Per Second</div>
+                <div class="stat-value" id="per-second">0</div>
+            </div>
+        </div>
+        
+        <div class="mine-area">
+            <div id="shark"></div>
+            <div class="touch-zone" id="touch-zone"></div>
+        </div>
+        
+        <div class="buy-options">
+            <div class="buy-title">BUY SHARK COINS</div>
+            
+            <div class="buy-grid">
+                <div class="buy-option">
+                    <div class="option-name">10,000 Coins</div>
+                    <div class="option-price">1 USDT</div>
+                    <button class="buy-btn" id="buy-1">BUY</button>
+                </div>
+                
+                <div class="buy-option">
+                    <div class="option-name">50,000 Coins</div>
+                    <div class="option-price">5 USDT</div>
+                    <button class="buy-btn" id="buy-5">BUY</button>
+                </div>
+                
+                <div class="buy-option">
+                    <div class="option-name">200,000 Coins</div>
+                    <div class="option-price">20 USDT</div>
+                    <button class="buy-btn" id="buy-20">BUY</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="withdraw-section">
+            <div class="buy-title">WITHDRAW EARNINGS</div>
+            
+            <div class="chain-selector">
+                <div class="chain-option active" id="ton-option">TON</div>
+                <div class="chain-option" id="sol-option">SOLANA</div>
+            </div>
+            
+            <div class="withdraw-form">
+                <input type="text" id="wallet-address" placeholder="Your Wallet Address">
+                <input type="number" id="withdraw-amount" placeholder="Amount to withdraw">
+                <button class="withdraw-btn" id="withdraw-btn">WITHDRAW</button>
+            </div>
+            
+            <div class="withdraw-info">
+                Minimum withdrawal: 1,000 coins<br>
+                Processing fee: 5% (TON/SOL network fees)
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
